@@ -1,7 +1,7 @@
 import React from 'react';
-import Navbar from '../../Components/Navbar/Navbar';
+import Navbar from '../Components/Navbar/Navbar';
 
-const Login = () => {
+const Cart = () => {
     return (
         <div className= "container">
             <Navbar/>
@@ -10,4 +10,4 @@ const Login = () => {
     )
 }
 
-export default Login;
+export default Cart;

@@ -1,13 +1,13 @@
 import React from 'react';
 import Navbar from '../../Components/Navbar/Navbar';
 
-const Home = () => {
+const Register = () => {
     return (
-        <div className= "navbar-container">
+        <div className= "container">
             <Navbar/>
             
         </div>
     )
 }
 
-export default Home;
+export default Register;
