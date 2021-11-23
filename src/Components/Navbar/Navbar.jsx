@@ -23,10 +23,14 @@ import { Search, Person, Notifications } from "@mui/icons-material";
 
 export default function Navbar() {
     return (
+    
       <div className="navbarContainer">
         <div className="navbarLeft">
+          <center>
           <span className="logo">Isaac's Ecom Shop</span>
+          </center>
         </div>
+        
         <center>
         <div className="navbarCenter">
           <div className="searchbar">
@@ -38,26 +42,28 @@ export default function Navbar() {
           </div>
         </div>
         </center>
+      
         <div className="navbarRight">
           <div className="navbarLinks">
             <span className="navbarLink">Home</span>
             <span className="navbarLink"> Products</span>
             <span className="navbarLink"> Cart</span>
+            
           </div>
+          
           <div className="navbarIcons">
             <div className="navbarIconItem">
               <Person />
             </div>
-            {/* <div className="navbarIconItem">
-              < Event/>
-              <span className="navbarIconBadge">1</span>
-            </div> */}
+           
             <div className="navbarIconItem">
               <Notifications />
             </div>
           </div>
         </div>
+        
       </div>
+     
     );
   }
 
