@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { Badge } from '@material-ui/core';
 import { Search } from '@material-ui/icons';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
-//import './navbar.css';
 //import { Search, Person, Notifications } from "@mui/icons-material";
 
 const Container = styled.div`
@@ -67,7 +66,7 @@ const Navbar = () => {
     <Container>
      <Wrapper>
         <Left>
-          <Language>EN</Language>
+          <Language></Language>
           <SearchContainer>
             <Input/>
             <Search style={{color:"blue", fontSize: 22}}/>
@@ -75,8 +74,8 @@ const Navbar = () => {
           </Left>
         <Center><Logo>Isaac's Ecom Shop</Logo></Center>
         <Right>
-          <MenuItem>Register</MenuItem>
-          <MenuItem>Login</MenuItem>
+          <MenuItem>REGISTER</MenuItem>
+          <MenuItem>LOGIN</MenuItem>
           <MenuItem>
             <Badge badgeContent={3} color= "primary">
               <ShoppingCartOutlinedIcon />
