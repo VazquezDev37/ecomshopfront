@@ -102,21 +102,22 @@
     //                 "variant": "MAIN",
     //                 "link": "https://m.media-amazon.com/images/I/81dVtLN-c1L._AC_SL1500_.jpg"
     //             },
-
-    //             "newer_model": {
-    //                 "title": "SanDisk 128GB Ultra MicroSDXC UHS-I Memory Card with Adapter - 120MB/s, C10, U1, Full HD, A1, Micro SD Card - SDSQUA4-128G-GN6MA",
-    //                 "asin": "B08GYKNCCP",
-    //                 "link": "https://www.amazon.com/SanDisk-128GB-MicroSDXC-Memory-Adapter-dp-B08GYKNCCP/dp/B08GYKNCCP/ref=dp_ob_image_ce",
-    //                 "image": "https://m.media-amazon.com/images/I/61rWhfNegOL._SR75,75_.jpg",
-    //                 "rating": 5,
-    //                 "ratings_total": 96539,
-    //                 "price": {
-    //                     "symbol": "$",
-    //                     "value": 17.99,
-    //                     "currency": "USD",
-    //                     "raw": "$17.99"
-    //                 }
-    //             },
+            export const categoryItems = [
+                         {
+                    "title": "SanDisk 128GB Ultra MicroSDXC UHS-I Memory Card with Adapter - 120MB/s, C10, U1, Full HD, A1, Micro SD Card - SDSQUA4-128G-GN6MA",
+                    "asin": "B08GYKNCCP",
+                    "link": "https://www.amazon.com/SanDisk-128GB-MicroSDXC-Memory-Adapter-dp-B08GYKNCCP/dp/B08GYKNCCP/ref=dp_ob_image_ce",
+                    "image": "https://m.media-amazon.com/images/I/61rWhfNegOL._SR75,75_.jpg",
+                    "rating": 5,
+                    "ratings_total": 96539,
+                    "price": {
+                        "symbol": "$",
+                        "value": 17.99,
+                        "currency": "USD",
+                        "raw": "$17.99"
+                    }
+                }
+            ]
     //             "frequently_bought_together": {
     //                 "total_price": {
     //                     "symbol": "$",

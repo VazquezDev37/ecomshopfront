@@ -1,12 +1,15 @@
 import React from 'react';
-import Navbar from '../../Components/Navbar/Navbar';
+import styled from 'styled-components';
+
+
+
+const Container = styled.div``
 
 const Login = () => {
     return (
-        <div className= "container">
-            <Navbar/>
+        <Container>
             
-        </div>
+        </Container>
     )
 }
 

@@ -98,7 +98,7 @@ const Slider = () => {
                 {/* <Image src="https://m.media-amazon.com/images/I/81dVtLN-c1L._AC_SL1500_.jpg"/> */}
                 </ImgContainer>
                 <InfoContainer>
-                    <Title>CHRISTMAS SALE</Title>
+                    <Title>Black Friday Sale</Title>
                     <Desc>Hurry!! Get a 40% off new arrivals.</Desc>
                     <Button>Show Me</Button>
                 </InfoContainer>
@@ -108,7 +108,7 @@ const Slider = () => {
                 {/* <Image src="https://m.media-amazon.com/images/I/81dVtLN-c1L._AC_SL1500_.jpg"/> */}
                 </ImgContainer>
                 <InfoContainer>
-                    <Title>CLEARANCE SALE</Title>
+                    <Title>Clearance Sale</Title>
                     <Desc>Hurry!! Get a 40% off!!!.</Desc>
                     <Button>Show Me</Button>
                 </InfoContainer>
@@ -118,7 +118,7 @@ const Slider = () => {
                 {/* <Image src="https://m.media-amazon.com/images/I/81dVtLN-c1L._AC_SL1500_.jpg"/> */}
                 </ImgContainer>
                 <InfoContainer>
-                    <Title> WINTER SALE</Title>
+                    <Title> Christmas Sale</Title>
                     <Desc>Hurry!! Get a 20% off new arrivals.</Desc>
                     <Button>Show Me</Button>
                 </InfoContainer>
