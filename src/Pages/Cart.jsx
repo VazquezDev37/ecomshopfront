@@ -7,8 +7,7 @@ import RemoveIcon from '@mui/icons-material/Remove';
 
 
 const Container = styled.div`
-   
-    
+      
 `;
 
 const Wrapper = styled.div`
@@ -37,9 +36,9 @@ const TopButton = styled.button`
     color: white;
 `;
 
-const TopTexts = styled.div`
+// const TopTexts = styled.div`
     
-`;
+// `;
 
 const TopText = styled.span`
     text-decoration: underline;
@@ -85,7 +84,7 @@ const ProductName = styled.span``;
 const ProductId = styled.span``;
 
 const PriceDetail = styled.div`
-    flex: 2;
+    flex: 1;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -95,43 +94,76 @@ const PriceDetail = styled.div`
 const ProductAmountContainer = styled.div`
     display: flex;
     align-items: center;
-    margin-bottom: 20px
+    margin-bottom: 25px
+
 `;
 
 const ProductAmount = styled.div`
-    font-size: 20px;
-    margin: 10px;
+    font-size: 30px;
+    margin: 15px;
 `;
 
 const ProductPrice = styled.div`
-    font-size: 35;
-    font-weight: 250;
+    font-size: 40;
+    margin: 10px;
 `;
 
 const Hr = styled.hr`
     background-color: blue;
 `;
 
-const Add = styled.div``;
-
-const Remove = styled.div``;
-
 
 const Summary = styled.div`
     flex: 1;
+    border: 0.5px solid grey;
+    border-radius: 25px;
+    height: 50vh;
+    padding: 20px;
 
 `;
 
-const SummaryTitle = styled.h1``;
-const SummaryItem = styled.div``;
+const SummaryTitle = styled.h1`
+    font-weight: 300;
+`;
+
+const SummaryItem = styled.div`
+    margin: 30px 0px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: ${props=>props.type === "total" && "400" };
+    font-size: ${props=>props.type === "total" && "25px" };
+    flex-direction: column;
+    justify-content: center;
+`;
+
 const SummaryItemText = styled.span``;
-const SummaryItemPrice = styled.span``;
-const Button = styled.button``;
 
 
+const SummaryItemPrice = styled.span`
+    flex: 2;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 15px;
+    margin: 5px 30px;
+`;
 
 
-const Footer = styled.div``
+const Button = styled.button`
+    width: 50%;
+    background-color: black;
+    color: white;
+    font-weight: 600;
+    padding: 5px;
+    cursor: pointer;
+    margin: 15px 35px;
+`;
+
+
+const Footer = styled.div``;
+
+
 
 const Cart = () => {
     return (
@@ -191,7 +223,7 @@ const Cart = () => {
                       <SummaryItem>
                           <SummaryItemText>Subtotal</SummaryItemText>
                           <SummaryItemPrice>$ 30</SummaryItemPrice>
-                          <SummaryItemText>Estimated Shipping</SummaryItemText>
+                          <SummaryItemText>Shipping</SummaryItemText>
                           <SummaryItemPrice>$ 5</SummaryItemPrice>
                           <SummaryItemText type= "total">Total</SummaryItemText>
                           <SummaryItemPrice>$ 35</SummaryItemPrice>
