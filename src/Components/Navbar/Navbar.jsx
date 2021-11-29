@@ -61,7 +61,7 @@ const Wrapper = styled.div`
     margin-left: 20px;
   `;
 
-const Navbar = () => {
+const Navbar = ({ user }) => {
   return (
     <Container>
      <Wrapper>

@@ -1,64 +1,56 @@
 import React, { useState } from 'react';
 import './register.css';
-import styled from 'styled-components';
-import  { useNavigate }  from 'react-router-dom';
 import axios from 'axios';
 
+                                
+
 function Register() {
-    const [username, setUsername] = useState("");
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-    const navigate = useNavigate();
-  
-    const submitRegister = () => {
-      axios
-        .post("http://localhost:5000/api/auth/register", {
-          username: username,
-          email: email,
-          password: password,
+   
+     const [regForm, setRegForm ] = useState({
+       
+       email: "",
+       password: ""
+     })
+
+     const handleChange = (e)=> {
+        setRegForm({
+          ...regForm, [e.target.name]: e.target.value
         })
-        .then((response) => {
-          navigate.push("/Login");
-          console.log(response);
-        });
+     }
+  
+    const submitRegister = (e) => {
+      e.preventDefault()
+      axios.post("http://localhost:5000/api/auth/register", regForm )
+      window.location= "/Login"  
     };
   
     return (
       <div id="login-box">
         <div class="left">
           <h1>Register</h1>
-  
+        <form onSubmit={(e) => submitRegister(e)}>
+      
           <input
             type="text"
-            onChange={(e) => setUsername(e.target.value)}
-            type="text"
-            name="username"
-            placeholder="Username"
-          />
-          <input
-            type="text"
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={ handleChange}
             type="text"
             name="email"
             placeholder="E-mail"
           />
           <input
             type="text"
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={handleChange}
             type="password"
             name="password"
             placeholder="Password"
           />
   
-          <input
-            onClick={submitRegister}
-            onSubmit={submitRegister}
-            type="submit"
-            name="signup_submit"
-            value="Sign me up"
-          />
+          <button type = "submit">Sign me Up</button> 
+           
+          
+          </form>
         </div>
-  
+        
         <div class="right"></div>
         <div class="or"></div>
       </div>

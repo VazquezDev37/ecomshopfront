@@ -1,65 +1,64 @@
 import styled from 'styled-components';
 import React, { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
 
 
-export default function Login() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const navigate = useNavigate();
 
+function Login() {
+   
+  const [regForm, setRegForm ] = useState({
+    
+    email: "",
+    password: ""
+  })
 
-  const submitLogin = (e) => {
-    e.preventDefault();
-    axios
-      .post("http://localhost:5000/api/auth/login", {
-        email: email,
-        password: password,
-      })
-      .then((response) => {
-        console.log(response);
-        localStorage.setItem("token", response.data.token);
-        localStorage.setItem("email", email);
-        // localStorage.setItem('username', response.data.username)
-        navigate.push("/Home");
-      });
-  };
+  const handleChange = (e)=> {
+     setRegForm({
+       ...regForm, [e.target.name]: e.target.value
+     })
+  }
 
-  return (
-    <div class="wrapper">
-      <form class="login" onSubmit={submitLogin}>
-        <p class="title">Log In</p>
-        <input
-          type="text"
-          type="text"
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder="email"
-          type="email"
-          autoFocus
-        />
-        <i class="fa fa-user"></i>
-        <input
-          type="password"
-          type="text"
-          onChange={(e) => setPassword(e.target.value)}
-          type="password"
-          placeholder="Password"
-        />
-        <i class="fa fa-key"></i>
-        <button onClick={(e) => submitLogin(e)} className="loginButton" type="submit">
-          <i class="spinner"></i>
-          <span class="state">Log in</span>
-        </button>
-      </form>
-      <footer>
-        <a target="blank" href="http://boudra.me/">
-          Isaac's Ecom Shop
-        </a>
-      </footer>
-    </div>
-  );
+ const submitLogin = (e) => {
+   e.preventDefault()
+   axios.post("http://localhost:5000/api/auth/login", regForm )
+   window.location= "/Home"  
+ };
+
+ return (
+   <center>
+   <div id="login-box">
+     <div class="left">
+       <h1>Login</h1>
+     <form onSubmit={(e) => submitLogin(e)}>
+   
+       <input
+         type="text"
+         onChange={ handleChange}
+         type="text"
+         name="email"
+         placeholder="E-mail"
+       />
+       <input
+         type="text"
+         onChange={handleChange}
+         type="password"
+         name="password"
+         placeholder="Password"
+       />
+
+       <button type = "submit">Login</button> 
+        
+       
+       </form>
+     </div>
+     
+     <div class="right"></div>
+     <div class="or"></div>
+   </div>
+   </center>
+ );
 }
+
 
 // const Container = styled.div`
 //     width: 100vw;
@@ -126,4 +125,4 @@ export default function Login() {
 //     )
 // }
 
-// export default Login;
+export default Login;
