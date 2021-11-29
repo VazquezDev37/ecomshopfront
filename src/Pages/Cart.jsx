@@ -153,13 +153,19 @@ const SummaryItemPrice = styled.span`
 const Button = styled.button`
     width: 50%;
     background-color: black;
-    color: white;
+    color: grey;
     font-weight: 600;
     padding: 5px;
     cursor: pointer;
     margin: 15px 35px;
 `;
 
+const MenuItem = styled.div`
+font-size: 15px;
+cursor: pointer;
+margin-left: 10px;
+color: grey;
+`;
 
 const Footer = styled.div``;
 
@@ -174,7 +180,7 @@ const Cart = () => {
               <Title>Your Shopping Cart</Title>
               <Top>
                   <TopButton>Continue Shopping</TopButton>
-                  <TopText>Shopping Cart(3)</TopText>
+                  <TopText>Shopping Cart(2)</TopText>
                   <TopText>Wish List(0)</TopText>
                   <TopButton>Checkout Now</TopButton>
               </Top>
@@ -228,7 +234,7 @@ const Cart = () => {
                           <SummaryItemText type= "total">Total</SummaryItemText>
                           <SummaryItemPrice>$ 35</SummaryItemPrice>
                       </SummaryItem>
-                      <Button>Checkout Now</Button>
+                      <Button>  <MenuItem> <a href="/Pay"> Checkout Now </a></MenuItem></Button>
                   </Summary>
               </Bottom>
           </Wrapper>

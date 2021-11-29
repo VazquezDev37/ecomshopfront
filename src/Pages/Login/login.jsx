@@ -45,9 +45,9 @@ function Login() {
          name="password"
          placeholder="Password"
        />
-
+      <Button>
        <button type = "submit">Login</button> 
-        
+       </Button>
        
        </form>
      </div>
@@ -93,13 +93,13 @@ function Login() {
 //     padding: 10px;
 // `;
 
-// const Button = styled.button`
-//     width 30%;
-//     padding: 10px 10px;
-//     background-color: blue;
-//     color: white;
-//     cursor: pointer;
-// `;
+const Button = styled.button`
+    width 30%;
+    padding: 10px 10px;
+    background-color: grey;
+    color: white;
+    cursor: pointer;
+`;
 
 // const Link = styled.a`
 //     margin: 5px 0px;

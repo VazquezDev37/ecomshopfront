@@ -100,7 +100,7 @@ const Slider = () => {
                 <InfoContainer>
                     <Title>Black Friday Sale</Title>
                     <Desc>Hurry!! Get a 40% off new arrivals.</Desc>
-                    <Button>Show Me</Button>
+                    <Button> <a href="/Product_page">Show Me</a></Button>
                 </InfoContainer>
                 </Slide>
                 <Slide>

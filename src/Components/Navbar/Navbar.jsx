@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { Badge } from '@material-ui/core';
 import { Search } from '@material-ui/icons';
@@ -28,7 +29,7 @@ const Wrapper = styled.div`
   `;
 
   const SearchContainer = styled.div`
-    border: 1px solid lightgray;
+    border: 1px solid gray;
     display: flex;
     align-items: center;
     margin-left: 25px;
@@ -59,6 +60,8 @@ const Wrapper = styled.div`
     font-size: 15px;
     cursor: pointer;
     margin-left: 20px;
+    color: white;
+  
   `;
 
 const Navbar = ({ user }) => {
@@ -69,17 +72,23 @@ const Navbar = ({ user }) => {
           <Language></Language>
           <SearchContainer>
             <Input/>
-            <Search style={{color:"blue", fontSize: 22}}/>
+            <Search style={{color:"blue", fontSize: 22}} />
+            <a href="/Product_page"></a>
           </SearchContainer>
           </Left>
         <Center><Logo>Isaac's Ecom Shop</Logo></Center>
         <Right>
-          <MenuItem>REGISTER</MenuItem>
-          <MenuItem>LOGIN</MenuItem>
+          
+          <MenuItem>  <a href="/Register">REGISTER</a></MenuItem>
+          
+          <MenuItem> <a href="/Login">LOGIN</a></MenuItem>
+           
+          <MenuItem> <a href="/Login">LOGOUT</a></MenuItem>
+          
           <MenuItem>
-            <Badge badgeContent={3} color= "primary">
-              <ShoppingCartOutlinedIcon />
-            </Badge>
+            <Badge badgeContent={2} color= "primary"> <MenuItem> <a href="/Cart"> <ShoppingCartOutlinedIcon /></a></MenuItem>
+               
+            </Badge> 
           </MenuItem>
         </Right>
      </Wrapper>

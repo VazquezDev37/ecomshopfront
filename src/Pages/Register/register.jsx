@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './register.css';
 import axios from 'axios';
+import styled from 'styled-components';
 
                                 
 
@@ -44,9 +45,9 @@ function Register() {
             name="password"
             placeholder="Password"
           />
-  
-          <button type = "submit">Sign me Up</button> 
-           
+          <Button>
+          <button type = "submit">Sign Me Up</button> 
+          </Button>
           
           </form>
         </div>
@@ -88,12 +89,12 @@ function Register() {
 //     margin: 15px 30px 0px 0px;
 // `;
 
-// const Button = styled.button`  
-//     padding: 15px 10px;
-//     background-color: blue;
-//     color: white;
-//     cursor: pointer;
-// `;
+const Button = styled.button`  
+    padding: 15px 10px;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+`;
 
 
 // const Register = () => {
