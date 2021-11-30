@@ -1,7 +1,10 @@
 import React from 'react';
 import  styled  from 'styled-components';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
-
+import StarBorderRoundedIcon from '@mui/icons-material/StarBorderRounded'
+import Comments from './Comments';
+import DisplayComment from './DisplayComment';
+import ReplyComments from './ReplyComments';
 
 const Container = styled.div`
    flex: 1;
@@ -32,6 +35,11 @@ const Container = styled.div`
 
     const Icon = styled.div``;
 
+    const createComment = (newComment) => {
+        console.log(`new comment: ${newComment}`)
+    }
+        
+
 const Product_page = () => {
     return (
         <Container>
@@ -40,7 +48,10 @@ const Product_page = () => {
             <Info>
             "SanDisk 16GB Ultra MicroSDXC UHS-I Memory Card with 
             Adapter - 120MB/s, C10, U1, Full HD, A1, Micro SD Card - SDSQUA4-16G-GN6MA"
-            
+            <StarBorderRoundedIcon/><StarBorderRoundedIcon/><StarBorderRoundedIcon/><StarBorderRoundedIcon/>
+            <Comments createNewComment = {createComment} />
+            <ul><DisplayComment/></ul>
+            <ul><ReplyComments/></ul>
             <Right>
                 <Icon>
                 <MenuItem> <a href="/Cart"> <ShoppingCartOutlinedIcon /></a></MenuItem>
@@ -53,5 +64,7 @@ const Product_page = () => {
         </Container>
     )
 }
+
+
 
 export default Product_page;

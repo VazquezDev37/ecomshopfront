@@ -36,15 +36,12 @@ const TopButton = styled.button`
     color: white;
 `;
 
-// const TopTexts = styled.div`
-    
-// `;
 
 const TopText = styled.span`
     text-decoration: underline;
     cursor: pointer;
     margin: 15px 35px;
-    color: blue;
+    color: black;
 `;
 const Bottom = styled.div`
     display: flex;
@@ -179,8 +176,8 @@ const Cart = () => {
           <Wrapper>
               <Title>Your Shopping Cart</Title>
               <Top>
-                  <TopButton>Continue Shopping</TopButton>
-                  <TopText>Shopping Cart(2)</TopText>
+                  <TopButton> Continue Shopping </TopButton>
+                  <TopText><a href="/Cart"> Shopping Cart(2) </a></TopText>
                   <TopText>Wish List(0)</TopText>
                   <TopButton>Checkout Now</TopButton>
               </Top>
@@ -192,7 +189,7 @@ const Cart = () => {
                               <Details>
                                   <ProductName>
                                       <b>Product:</b> SanDisk Memory</ProductName>
-                                  <ProductId><b>ID:</b><b> 487934988724</b></ProductId>
+                                  <ProductId><b>ID:</b><b> B073K14CVB</b></ProductId>
                               </Details>    
                           </ProductDetail>
                           <PriceDetail>
@@ -211,7 +208,7 @@ const Cart = () => {
                               <Details>
                                   <ProductName>
                                       <b>Product:</b> SanDisk Memory</ProductName>
-                                  <ProductId><b>ID:</b><b> 487934988724</b></ProductId>
+                                  <ProductId><b>ID:</b><b> B073K14CVB</b></ProductId>
                               </Details>    
                           </ProductDetail>
                           <PriceDetail>

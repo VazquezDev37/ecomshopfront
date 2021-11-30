@@ -48,11 +48,14 @@ align-items: center;
 const ImgContainer = styled.div`
     height: 100%;
     flex: 1;
+    background-color: teal;
 `;
 
-// const Image = styled.img`
-//     height 60%;
-// `;
+const Image = styled.img`
+    border-radius: 8px;
+    padding: 5px;
+    width: 200px;
+    `;
 
 const InfoContainer = styled.div`
     flex: 1;
@@ -95,7 +98,7 @@ const Slider = () => {
             <Wrapper>       
                 <Slide>
                 <ImgContainer>          
-                {/* <Image src="https://m.media-amazon.com/images/I/81dVtLN-c1L._AC_SL1500_.jpg"/> */}
+                <Image src="https://m.media-amazon.com/images/I/81dVtLN-c1L._AC_SL1500_.jpg"/>
                 </ImgContainer>
                 <InfoContainer>
                     <Title>Black Friday Sale</Title>
@@ -105,7 +108,7 @@ const Slider = () => {
                 </Slide>
                 <Slide>
                 <ImgContainer>
-                {/* <Image src="https://m.media-amazon.com/images/I/81dVtLN-c1L._AC_SL1500_.jpg"/> */}
+                <Image src= "https://images-na.ssl-images-amazon.com/images/I/71ZuukioEcL._AC_UL116_SR116,116_.jpg"/>
                 </ImgContainer>
                 <InfoContainer>
                     <Title>Clearance Sale</Title>
@@ -115,7 +118,7 @@ const Slider = () => {
                 </Slide>
                 <Slide>
                 <ImgContainer>
-                {/* <Image src="https://m.media-amazon.com/images/I/81dVtLN-c1L._AC_SL1500_.jpg"/> */}
+                <Image src= "https://m.media-amazon.com/images/I/81axmUuRHrL._AC_SS450_.jpg"/>
                 </ImgContainer>
                 <InfoContainer>
                     <Title> Christmas Sale</Title>

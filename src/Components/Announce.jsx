@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const Container = styled.div`
     height: 25px;
-    background-color: green;
+    background-color: teal;
     color: white;
     display: flex;
     align-items: center;

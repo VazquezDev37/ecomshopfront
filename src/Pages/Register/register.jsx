@@ -46,7 +46,7 @@ function Register() {
             placeholder="Password"
           />
           <Button>
-          <button type = "submit">Sign Me Up</button> 
+          <button type = "submit">SIGN ME UP</button> 
           </Button>
           
           </form>
@@ -91,7 +91,7 @@ function Register() {
 
 const Button = styled.button`  
     padding: 15px 10px;
-    background-color: blue;
+    background-color: grey;
     color: white;
     cursor: pointer;
 `;
