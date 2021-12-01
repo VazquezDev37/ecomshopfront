@@ -6,6 +6,7 @@ import Logout from "./Pages/logout";
 import Cart from "./Pages/Cart";
 import Product_page from "./Components/Product_page";
 import Product from "./Components/Product";
+import SearchProduct from "./Components/SearchProduct";
 import Comments from "./Components/Comments";
 import DisplayComment from "./Components/DisplayComment";
 import ReplyComments from "./Components/ReplyComments";
@@ -52,6 +53,7 @@ function App() {
           <Route path='/displayComment' element={<DisplayComment user={user} />} />
           <Route path='/replyComments' element={<ReplyComments user={user} />} />
           <Route path='/product' element={<Product user={user} />} />
+          {/* <Route path='/searchProduct' element={<SearchProduct user={user} />} /> */}
   
   
         </Routes>

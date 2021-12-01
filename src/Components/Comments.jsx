@@ -1,37 +1,6 @@
 import React, {  useState } from 'react';
 import axios from 'axios';
-// import  styled  from 'styled-components';
 
-
-
-// const Container = styled.div`
-//    flex: 1;
-//    margin 5px;
-//     `;
-
-//     const Image = styled.img`
-//     border-radius: 8px;
-//     padding: 5px;
-//     width: 250px;
-//     `;
-
-//     const MenuItem = styled.div`
-//     font-size: 25px;
-//     cursor: pointer;
-//     margin-left: 20px;
-//   `;
-
-//   const Right = styled.div`
-//     flex: 2;
-//     display: flex;
-//     align-items: center;
-//     justify-content: flex-end;
-//   `;
-
-   
-//     const Info = styled.div``;
-
-//     const Icon = styled.div``;
 
     
     

@@ -1,5 +1,8 @@
 import React from 'react';
 import  styled  from 'styled-components';
+// import Comments from './';
+// import DisplayComment from './DisplayComment';
+// import ReplyComments from './ReplyComments';
 
 
 const Container = styled.div`
@@ -62,6 +65,10 @@ const Pay = () => {
                       </SummaryItem>
 
                 Pay for Products Here!! using Stripe or PayPal.
+
+                {/* <Comments createNewComment = {createComment} />
+            <ul><DisplayComment/></ul>
+          <ul><ReplyComments/></ul> */}
 
           
              </Summary>
