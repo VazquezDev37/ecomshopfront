@@ -1,8 +1,8 @@
 import React from 'react';
 import  styled  from 'styled-components';
-// import Comments from './';
-// import DisplayComment from './DisplayComment';
-// import ReplyComments from './ReplyComments';
+import Comments from './Components/Comments';
+import DisplayComment from './Components/DisplayComment';
+import ReplyComments from './Components/ReplyComments';
 
 
 const Container = styled.div`
@@ -57,18 +57,20 @@ const Pay = () => {
             <SummaryTitle>Order Summary</SummaryTitle>
                       <SummaryItem>
                           <SummaryItemText>Subtotal</SummaryItemText>
-                          <SummaryItemPrice>$ 30</SummaryItemPrice>
+                          <SummaryItemPrice>$ </SummaryItemPrice>
                           <SummaryItemText>Shipping</SummaryItemText>
-                          <SummaryItemPrice>$ 5</SummaryItemPrice>
+                          <SummaryItemPrice>$ </SummaryItemPrice>
                           <SummaryItemText type= "total">Total</SummaryItemText>
-                          <SummaryItemPrice>$ 35</SummaryItemPrice>
+                          <SummaryItemPrice>$ </SummaryItemPrice>
                       </SummaryItem>
 
                 Pay for Products Here!! using Stripe or PayPal.
 
-                {/* <Comments createNewComment = {createComment} />
+                CLick on link below to process payment...
+
+                <Comments  />
             <ul><DisplayComment/></ul>
-          <ul><ReplyComments/></ul> */}
+          <ul><ReplyComments/></ul>
 
           
              </Summary>

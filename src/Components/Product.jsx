@@ -1,5 +1,14 @@
 import React, { useState } from 'react';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import styled from 'styled-components';
+
+const Button = styled.button`  
+    padding: -10px 60px;
+    background-color: teal;
+    color: white;
+    cursor: pointer;
+`;
+
 
 
 
@@ -85,10 +94,13 @@ export default function Product({ setCart, cart }) {
             <h3>{product.name}</h3>
             <h4>${product.cost}</h4>
             <img src={product.image} alt={product.name} />
+            <Button>
             <button onClick={() => addToCart(product)}>
               Add to Cart
             </button>
-            <a href="/Pay"> <ShoppingCartOutlinedIcon /></a>
+            <button><a href="/Pay"> Checkout </a></button>
+            </Button>
+           
           </div>
         ))}
       </div>

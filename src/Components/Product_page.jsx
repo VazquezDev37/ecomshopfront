@@ -8,9 +8,10 @@ import Cart from '../Pages/Cart';
 
 
 const MenuItem = styled.div`
-     font-size: 25px;
+     font-size: 20px;
      cursor: pointer;
-     margin-left: 20px;
+     margin-left: 5px;
+     text-decoration: none;
  `;
 
 
@@ -43,7 +44,7 @@ function Product_page() {
           View Products
         </button>
         <button>
-        <MenuItem> <a href="/Pay"> Checkout Now </a></MenuItem>
+        <MenuItem>  <a href="/Pay"> Checkout </a></MenuItem>
         </button>
       </header>
       {page === PAGE_PRODUCT && (
