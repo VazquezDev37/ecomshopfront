@@ -62,3 +62,13 @@
     height: 70px;
     padding-top: 20px;
   }
+
+  a:link, a:visited {
+    background-color: white;
+    color: black;
+    border: 2px solid teal;
+    padding: 3px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }

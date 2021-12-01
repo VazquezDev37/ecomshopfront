@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { Badge } from '@material-ui/core';
-import { Search } from '@material-ui/icons';
+// import { Search } from '@material-ui/icons';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 //import { Search, Person, Notifications } from "@mui/icons-material";
 
@@ -72,8 +72,8 @@ const Navbar = ({ user }) => {
           <Language></Language>
           <SearchContainer>
             <Input/>
-            <Search style={{color:"blue", fontSize: 22}} />
-            <a href="/Product_page"></a>
+            {/* <Search  /> */}
+            <a href="/Product_page">Search</a>
           </SearchContainer>
           </Left>
         <Center><Logo>Isaac's Ecom Shop</Logo></Center>
