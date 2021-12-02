@@ -34,7 +34,10 @@ function Product_page() {
   };
 
   return (
+
+    
     <div className="App">
+      <center>
       <header>
         <button onClick={() => navigateTo(PAGE_CART)}>
           Go to Cart ({getCartTotal()})
@@ -46,7 +49,9 @@ function Product_page() {
         <button>
         <MenuItem>  <a href="/Pay"> Checkout </a></MenuItem>
         </button>
+        
       </header>
+      </center>
       {page === PAGE_PRODUCT && (
         <Product cart={cart} setCart={setCart} />
       )}
@@ -54,6 +59,7 @@ function Product_page() {
         <Cart cart={cart} setCart={setCart} />
       )}
     </div>
+    
   );
 }
 

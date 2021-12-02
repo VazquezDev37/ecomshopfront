@@ -82,18 +82,65 @@ export default function Product({ setCart, cart }) {
 
   return (
     <>
+    <center>
       <h1>Products</h1>
       Select a category
       <select onChange={(e) => setCategory(e.target.value)}>
         <option value={Accessories}>{Accessories}</option>
         <option value={Storage}>{Storage}</option>
       </select>
+      </center>
+      <form onSubmit= "">
+      
+    <input
+      type="text"
+      // onChange={ handleChange}
+      type="text"
+      name="email"
+      placeholder="E-mail"
+    
+    data-label="Promo Code" 
+    data-msg="Please enter a valid promo code." 
+    type="text" name="promo-code" 
+    placeholder="Promo Code" 
+    pattern="10%off" required>
+      </input>
+    <Button>
+    <button type = "submit">Apply Discount</button> 
+    </Button>
+    
+    </form>
+    
+      {/* <form  onsubmit="this.target = '';
+            discnt = 10;
+            coupval = '(blanket)';
+            ReadForm (this);
+            discnt = 0;">
+            <input type="hidden" name="cmd" value="_cart" />
+            <input type="hidden" name="add" value="1" />
+            
+            <input type="hidden" name="item_name" value="Test Item" />
+            <input type="hidden" name="amount" value="10.00" />
+            <input type="hidden" name="currency_code" value="USD" />
+            
+            <input type="hidden" name="baseamt" value="10.00" />
+
+            10% Discount &gt;
+            <input type = "text"
+            name = "quantity"
+            text = "Enter Promo Code"
+            size = "3" />
+            
+            <input type="submit"  value="Apply" />
+            
+            </form> */}
       <div className="product">
         {getProductInCategory().map((product, id) => (
           <div className="product" key={id}>
             <h3>{product.name}</h3>
             <h4>${product.cost}</h4>
             <img src={product.image} alt={product.name} />
+            
             <Button>
             <button onClick={() => addToCart(product)}>
               Add to Cart

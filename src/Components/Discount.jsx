@@ -1,41 +1,42 @@
-import React from "react";
+// import React from "react";
 
-export default function Cards(props) {
-  return (
-    <div>
-      <div className="container mb-5 mt-2">
-        <div className="row">
-          {props.deals.map((deal, id) => (
-            <div className="col-sm-4 col-md-4 col-lg-4" key={id}>
-              <div className="card mt-3 ml-3 rounded-1 shadow mx-auto text-center">
-                <a href={deal.deal.url} target="noopener noreferrer">
-                  <img
-                    className="card-img-top"
-                    src={deal.deal.image_url}
-                    alt={"Deal"}
-                  
-                  />
-                </a>
-                <div className="card-body">
-                  <h5 className="card-title text-truncate">
-                    {deal.deal.title}
-                  </h5>
-                  <p className="card-text text-truncate small">
-                    {deal.deal.merchant.name}
-                  </p>
-                  <p className="card-text small">
-                    {deal.deal.merchant.locality}
-                  </p>
-                  <p className="card-text small">
-                    ${deal.deal.value.toFixed(2)}
-                  </p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-      <p className="text-center">{props.errMsg}</p>
-    </div>
-  );
-}
+// import Discount from "./Discount.css";
+
+// export default function Discount() {
+//   return (
+  
+    
+    // <form onSubmit="post">
+    // <input class="form-control form-control-light bdr-2 rd-0" required 
+    //        data-label="Promo Code" 
+    //        data-msg="Please enter a valid promo code." 
+    //        type="text" name="promo-code" 
+    //        placeholder="Promo Code" 
+    //        pattern="10%off" required>
+    // <input type="submit" value="submit"/>
+    //   </form>
+
+    // <form onSubmit= "">
+      
+    // <input
+    //   type="text"
+    //   onChange={ handleChange}
+    //   type="text"
+    //   name="email"
+    //   placeholder="E-mail"
+    
+    // data-label="Promo Code" 
+    // data-msg="Please enter a valid promo code." 
+    // type="text" name="promo-code" 
+    // placeholder="Promo Code" 
+    // pattern="10%off" required>
+    //   </input>
+    // <Button>
+    // <button type = "submit">Apply Coupon</button> 
+    // </Button>
+    
+    // </form>
+    
+//   );
+
+// } 

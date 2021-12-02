@@ -1,6 +1,7 @@
 import { ArrowLeftOutlined, ArrowRightOutlined } from '@material-ui/icons';
 import React from 'react';
 import styled from 'styled-components';
+// import Paypal from './Paypal';
 
 
 
@@ -97,18 +98,47 @@ const Slider = () => {
             </Arrow>
             <Wrapper>       
                 <Slide>
-                <ImgContainer>          
+                <ImgContainer>
+                
                 <Image src="https://m.media-amazon.com/images/I/81dVtLN-c1L._AC_SL1500_.jpg"/>
+                <Image src="https://m.media-amazon.com/images/I/617NtexaW2L._AC_SS450_.jpg"/>
                 </ImgContainer>
                 <InfoContainer>
                     <Title>Black Friday Sale</Title>
                     <Desc>Hurry!! Get a 40% off new arrivals.</Desc>
                     <Button> <a href="/Product_page">Show Me</a></Button>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" onsubmit="this.target = 'paypal';
+                return ReadForm (this);">
+                <input type="hidden" name="cmd" value="_cart" />
+                <input type="hidden" name="add" value="1" />
+                <input type="hidden" name="business" value="your_email_goes_here@your_site.com" />
+                <input type="hidden" name="item_name" value="2nd Item" />
+                <input type="hidden" name="amount" value="20.00" />
+                <input type="hidden" name="currency_code" value="USD" />
+                <input type="hidden" name="baseamt" value="20.00" />
+                <input type="hidden" name="basedes" value="2nd Item @20.00" />
+
+            Enter Coupon code [coup1] &gt;
+            <input type = "text"
+            size = "10"
+            name = "coupcode" />
+
+            <input type="button" value="Check It"
+            onclick="coupval = this.form.coupcode.value;
+            ChkCoup();" />
+
+            Input quantity &gt;
+            <input type="text" name="quantity" value="1" size="4" />
+
+            <input type="image" src="addcart.gif" name="submit" alt="cart add" />
+            </form>
+            
                 </InfoContainer>
                 </Slide>
                 <Slide>
                 <ImgContainer>
-                <Image src= "https://images-na.ssl-images-amazon.com/images/I/71ZuukioEcL._AC_UL116_SR116,116_.jpg"/>
+                <Image src= ""/>
+                <Image src= "https://m.media-amazon.com/images/I/815cRpgAN3L._AC_SS450_.jpg"/>
                 </ImgContainer>
                 <InfoContainer>
                     <Title>Clearance Sale</Title>
@@ -118,7 +148,8 @@ const Slider = () => {
                 </Slide>
                 <Slide>
                 <ImgContainer>
-                <Image src= "https://m.media-amazon.com/images/I/81axmUuRHrL._AC_SS450_.jpg"/>
+                <Image src= "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTz1EsMukmbsIEl_e-PuKiqcoaU0RT3Gvmw9UwNGX7vEka0S0NMSG8kVvFgj1paCUudN4y7RIeL51RcXipSWo7UChlAdOZP"/>
+                <Image src= "https://m.media-amazon.com/images/I/61Se1CwF6YS._AC_SL1500_.jpg"/>
                 </ImgContainer>
                 <InfoContainer>
                     <Title> Christmas Sale</Title>
@@ -130,6 +161,7 @@ const Slider = () => {
             <Arrow direction= "right" onClick= {()=>handleClick("right")}>
                 <ArrowRightOutlined/>
             </Arrow>
+            
         </Container>
     );
 };

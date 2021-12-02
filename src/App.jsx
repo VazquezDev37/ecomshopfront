@@ -13,6 +13,8 @@ import { Routes, Route } from "react-router-dom";
 import jwtDecode from "jwt-decode";
 import { useEffect } from "react";
 import Pay from "../src/Pay";
+// import Paypal from "./Components/Paypal";
+// import Discount from "./Components/Discount";
 
 
 
@@ -52,7 +54,9 @@ function App() {
           <Route path='/displayComment' element={<DisplayComment user={user} />} />
           <Route path='/replyComments' element={<ReplyComments user={user} />} />
           <Route path='/product' element={<Product user={user} />} />
-          
+          {/* <Route path='/paypal' element={<Paypal user={user} />} /> */}
+          {/* <Route path='/discount' element={<Discount user={user} />} />
+           */}
   
   
         </Routes>

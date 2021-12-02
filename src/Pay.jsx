@@ -63,6 +63,7 @@ const Pay = () => {
                           <SummaryItemText type= "total">Total</SummaryItemText>
                           <SummaryItemPrice>$ </SummaryItemPrice>
                       </SummaryItem>
+                      
 
                 Pay for Products Here!! using Stripe or PayPal.
 
