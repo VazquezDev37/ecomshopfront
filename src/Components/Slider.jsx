@@ -105,33 +105,8 @@ const Slider = () => {
                 </ImgContainer>
                 <InfoContainer>
                     <Title>Black Friday Sale</Title>
-                    <Desc>Hurry!! Get a 40% off new arrivals.</Desc>
+                    <Desc>Hurry!! Get a 10% off new arrivals.</Desc>
                     <Button> <a href="/Product_page">Show Me</a></Button>
-                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" onsubmit="this.target = 'paypal';
-                return ReadForm (this);">
-                <input type="hidden" name="cmd" value="_cart" />
-                <input type="hidden" name="add" value="1" />
-                <input type="hidden" name="business" value="your_email_goes_here@your_site.com" />
-                <input type="hidden" name="item_name" value="2nd Item" />
-                <input type="hidden" name="amount" value="20.00" />
-                <input type="hidden" name="currency_code" value="USD" />
-                <input type="hidden" name="baseamt" value="20.00" />
-                <input type="hidden" name="basedes" value="2nd Item @20.00" />
-
-            Enter Coupon code [coup1] &gt;
-            <input type = "text"
-            size = "10"
-            name = "coupcode" />
-
-            <input type="button" value="Check It"
-            onclick="coupval = this.form.coupcode.value;
-            ChkCoup();" />
-
-            Input quantity &gt;
-            <input type="text" name="quantity" value="1" size="4" />
-
-            <input type="image" src="addcart.gif" name="submit" alt="cart add" />
-            </form>
             
                 </InfoContainer>
                 </Slide>

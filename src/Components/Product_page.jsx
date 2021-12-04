@@ -6,13 +6,19 @@ import Cart from '../Pages/Cart';
 
 
 
-
 const MenuItem = styled.div`
      font-size: 20px;
      cursor: pointer;
      margin-left: 5px;
      text-decoration: none;
  `;
+
+ const Button = styled.button`  
+    padding: -10px 60px;
+    background-color: teal;
+    color: white;
+    cursor: pointer;
+`;
 
 
 const PAGE_PRODUCT = 'product';
@@ -58,6 +64,7 @@ function Product_page() {
       {page === PAGE_CART && (
         <Cart cart={cart} setCart={setCart} />
       )}
+      
     </div>
     
   );

@@ -1,255 +1,53 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import Announce from '../Components/Announce';
-import Navbar from '../Components/Navbar/Navbar';
-import AddIcon from '@mui/icons-material/Add';
-import RemoveIcon from '@mui/icons-material/Remove';
+import { loadStripe } from "@stripe/stripe-js";
+import { Elements } from "@stripe/react-stripe-js";
+import PaymentForm from '../Components/PaymentForm';
 
 
 
-// const Container = styled.div`
-      
-// `;
-
-// const Wrapper = styled.div`
-//      padding: 20px;
-   
-// `;
-
-// const Title = styled.h1`
-//     text-align: center;
-//     font-weight: 250;
-// `;
-
-// const Top = styled.div`
-//     display: flex;
-//     align-items: center;
-//     justify-content: space-between;
-//     padding: 20px;
-// `;
-
-// const TopButton = styled.button`
-//     padding: 10px;
-//     font-weight: 500;
-//     cursor: pointer;
-//     border: ${(props) => props.type === "filled" && "none"};
-//     background-color: black;
-//     color: white;
-// `;
+const Button = styled.button`  
+    padding: -10px 60px;
+    background-color: teal;
+    color: white;
+    cursor: pointer;
+`;
 
 
-// const TopText = styled.span`
-//     text-decoration: underline;
-//     cursor: pointer;
-//     margin: 15px 35px;
-//     color: black;
-// `;
-// const Bottom = styled.div`
-//     display: flex;
-//     justify-content: space-between;
-// `;
-
-// const Info = styled.div`
-//     flex: 5;
-// `;
-
-// const Product = styled.div`
-//     display: flex;
-//     justify-content: space-between;
-// `;
-
-// const ProductDetail = styled.div`
-//     flex: 3;
-//     display: flex;
-// `;
-
-// const Image = styled.img`
-// border-radius: 4px;
-// padding: 5px;
-// width: 150px;
-// `;
-
-
-// const Details = styled.div`
-//     display: flex;
-//     flex-direction: column;
-//     padding: 15px;
-//     justify-content: space-between;
-// `;
-
-// const ProductName = styled.span``;
-
-// const ProductId = styled.span``;
-
-// const PriceDetail = styled.div`
-//     flex: 1;
-//     display: flex;
-//     align-items: center;
-//     flex-direction: column;
-//     justify-content: center;
-// `;
-
-// const ProductAmountContainer = styled.div`
-//     display: flex;
-//     align-items: center;
-//     margin-bottom: 25px
-
-// `;
-
-// const ProductAmount = styled.div`
-//     font-size: 30px;
-//     margin: 15px;
-// `;
-
-// const ProductPrice = styled.div`
-//     font-size: 40;
-//     margin: 10px;
-// `;
-
-// const Hr = styled.hr`
-//     background-color: blue;
-// `;
-
-
-// const Summary = styled.div`
-//     flex: 1;
-//     border: 0.5px solid grey;
-//     border-radius: 25px;
-//     height: 50vh;
-//     padding: 20px;
-
-// `;
-
-// const SummaryTitle = styled.h1`
-//     font-weight: 300;
-// `;
-
-// const SummaryItem = styled.div`
-//     margin: 30px 0px;
-//     display: flex;
-//     justify-content: space-between;
-//     font-weight: ${props=>props.type === "total" && "400" };
-//     font-size: ${props=>props.type === "total" && "25px" };
-//     flex-direction: column;
-//     justify-content: center;
-// `;
-
-// const SummaryItemText = styled.span``;
-
-
-// const SummaryItemPrice = styled.span`
-//     flex: 2;
-//     display: flex;
-//     align-items: center;
-//     flex-direction: column;
-//     justify-content: center;
-//     font-size: 15px;
-//     margin: 5px 30px;
-// `;
-
-
-// const Button = styled.button`
-//     width: 50%;
-//     background-color: black;
-//     color: grey;
-//     font-weight: 600;
-//     padding: 5px;
-//     cursor: pointer;
-//     margin: 15px 35px;
-// `;
-
-// const MenuItem = styled.div`
-// font-size: 15px;
-// cursor: pointer;
-// margin-left: 10px;
-// color: grey;
-// `;
-
-// const Footer = styled.div``;
-
-
-
-// const Cart = () => {
-//     return (
-//       <Container> 
-//           <Navbar/>
-//           <Announce/>
-//           <Wrapper>
-//               <Title>Your Shopping Cart</Title>
-//               <Top>
-//                   <TopButton> Continue Shopping </TopButton>
-//                   <TopText><a href="/Cart"> Shopping Cart(2) </a></TopText>
-//                   <TopText>Wish List(0)</TopText>
-//                   <TopButton>Checkout Now</TopButton>
-//               </Top>
-//               <Bottom>
-//                   <Info>
-//                       <Product>
-//                           <ProductDetail>
-//                               <Image src= "https://m.media-amazon.com/images/I/81dVtLN-c1L._AC_SL1500_.jpg"/>
-//                               <Details>
-//                                   <ProductName>
-//                                       <b>Product:</b> SanDisk Memory</ProductName>
-//                                   <ProductId><b>ID:</b><b> B073K14CVB</b></ProductId>
-//                               </Details>    
-//                           </ProductDetail>
-//                           <PriceDetail>
-//                               <ProductAmountContainer>
-//                                   <AddIcon/>
-//                                   <ProductAmount>1</ProductAmount>
-//                                   <RemoveIcon/>
-//                               </ProductAmountContainer>
-//                               <ProductPrice> $ 15</ProductPrice>
-//                           </PriceDetail>
-//                       </Product>
-//                       <Hr/>
-//                       <Product>
-//                           <ProductDetail>
-//                               <Image src= "https://m.media-amazon.com/images/I/81dVtLN-c1L._AC_SL1500_.jpg"/>
-//                               <Details>
-//                                   <ProductName>
-//                                       <b>Product:</b> SanDisk Memory</ProductName>
-//                                   <ProductId><b>ID:</b><b> B073K14CVB</b></ProductId>
-//                               </Details>    
-//                           </ProductDetail>
-//                           <PriceDetail>
-//                               <ProductAmountContainer>
-//                                   <AddIcon/>
-//                                   <ProductAmount>1</ProductAmount>
-//                                   <RemoveIcon/>
-//                               </ProductAmountContainer>
-//                               <ProductPrice> $ 15</ProductPrice>
-//                           </PriceDetail>
-//                       </Product>
-//                   </Info>
-//                   <Summary>
-//                       <SummaryTitle>Order Summary</SummaryTitle>
-//                       <SummaryItem>
-//                           <SummaryItemText>Subtotal</SummaryItemText>
-//                           <SummaryItemPrice>$ 30</SummaryItemPrice>
-//                           <SummaryItemText>Shipping</SummaryItemText>
-//                           <SummaryItemPrice>$ 5</SummaryItemPrice>
-//                           <SummaryItemText type= "total">Total</SummaryItemText>
-//                           <SummaryItemPrice>$ 35</SummaryItemPrice>
-//                       </SummaryItem>
-//                       <Button>  <MenuItem> <a href="/Pay"> Checkout Now </a></MenuItem></Button>
-//                   </Summary>
-//               </Bottom>
-//           </Wrapper>
-//           <Footer/>
-//       </Container>
-//     )
-// }
-
-// export default Cart;
-
-export default function Cart({ cart, setCart }) {
+ function Cart({ cart, setCart }) {
     const getTotalSum = () => {
       return cart.reduce(
         (sum, { cost, quantity }) => sum + cost * quantity,
         0
       );
     };
+    
+    const getTotalDiscount = ({regForm}) => {
+      if (regForm.text === promo ) {
+        return totalCost.reduce(
+          ( { totalCost }) => totalCost -  0.1
+        )
+      }else { 
+        return
+      }
+       
+     }
+  
+     const promo = "promoCode"
+
+     const totalCost = "0.1"
+  
+    const [regForm, setRegForm ] = useState({
+      
+      text: ""
+      
+    })
+  
+    const handleChange = (e)=> {
+       setRegForm({
+         ...regForm, [e.target.name]: e.target.value
+       })
+    }
   
     const clearCart = () => {
       setCart([]);
@@ -271,7 +69,7 @@ export default function Cart({ cart, setCart }) {
   
     return (
       <>
-        <h1>Cart</h1>
+        <h1>My Cart</h1>
         {cart.length > 0 && (
           <button onClick={clearCart}>Clear Cart</button>
         )}
@@ -297,7 +95,36 @@ export default function Cart({ cart, setCart }) {
           ))}
         </div>
   
-        <div>Total Cost: ${getTotalSum()}</div>
+        <div>Total Cost: ${getTotalSum()}
+
+        <form onSubmit={(e) => getTotalDiscount(e)}>
+      
+      <input
+        type="text"
+        onChange={ handleChange }
+        onCLick={ totalCost}
+        type="text" 
+      data-label="Promo Code" 
+      data-msg="Please enter a valid promo code." 
+      type="text" name="promo-code" 
+      placeholder="Promo Code" 
+      pattern="10%off" required
+        />     
+      <Button>
+      <button type = "submit">Apply Discount</button> 
+      </Button> 
+      </form>
+      <>
+      <hr />
+      <Elements
+      stripe={loadStripe('pk_test_51K244WILIR4UakCXmvJkLzKMWz8tkfj7CBqNutsgKBWBoop603GSg0lERekEQp6Uj7iVRjEn1qHqRmQq2gnBDMQ000dAO539vC',
+      )}
+      >
+        <PaymentForm />
+      </Elements>
+      </>
+        </div>
       </>
     );
   }
+export default Cart;
