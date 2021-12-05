@@ -2,7 +2,7 @@ import React, {  useState } from 'react';
 import axios from 'axios';
 
 
-    
+    // Leave Review on Product
     
     const Comments = (props) => {
         const [text, setText] = useState  ('')
@@ -23,7 +23,7 @@ import axios from 'axios';
         return (
             <center>
             <form onSubmit = {handleSubmit}>
-                <label>Add a a Review</label>
+                <label>Add a Review</label>
                 <input onChange = {handleChange} value = {text}/>
                 <button onClick ="submit">POST REVIEW ON PRODUCT</button>
             </form>

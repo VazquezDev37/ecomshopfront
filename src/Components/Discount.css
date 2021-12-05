@@ -1,5 +1,5 @@
 
-/* .coupon {
+.coupon {
     border: 5px dotted #bbb; /* Dotted border */
     width: 80%;
     border-radius: 15px; /* Rounded border */
@@ -19,4 +19,4 @@
   
   .expire {
     color: red;
-  } */
+  }

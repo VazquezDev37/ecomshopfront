@@ -1,7 +1,6 @@
 import { ArrowLeftOutlined, ArrowRightOutlined } from '@material-ui/icons';
 import React from 'react';
 import styled from 'styled-components';
-// import Paypal from './Paypal';
 
 
 
@@ -117,7 +116,7 @@ const Slider = () => {
                 </ImgContainer>
                 <InfoContainer>
                     <Title>Clearance Sale</Title>
-                    <Desc>Hurry!! Get a 40% off!!!.</Desc>
+                    <Desc>Hurry!! Get a 20% off!!!.</Desc>
                     <Button>Show Me</Button>
                 </InfoContainer>
                 </Slide>
@@ -128,7 +127,7 @@ const Slider = () => {
                 </ImgContainer>
                 <InfoContainer>
                     <Title> Christmas Sale</Title>
-                    <Desc>Hurry!! Get a 20% off new arrivals.</Desc>
+                    <Desc>Hurry!! Get a 10% off new arrivals.</Desc>
                     <Button>Show Me</Button>
                 </InfoContainer>
                 </Slide>          

@@ -1,27 +1,66 @@
-// import React from 'react';
-// import { Typography, List, ListItem, ListItemText } from '@material-ui/core';
+import React from 'react';
+import  styled  from 'styled-components';
+import Comments from './Comments';
+import DisplayComment from './DisplayComment';
+import ReplyComments from './ReplyComments';
 
 
 
+const Container = styled.div`
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background-color: grey;
+    position: relative;   
+    color: white;
+`;
 
-// const Review = ({ checkoutToken }) => (
-//   <>
-//     <Typography variant="h6" gutterBottom>Order summary</Typography>
-//     <List disablePadding>
-//       {checkoutToken.live.line_items.map((product) => (
-//         <ListItem style={{ padding: '10px 0' }} key={product.name}>
-//           <ListItemText primary={product.name} secondary={`Quantity: ${product.quantity}`} />
-//           <Typography variant="body2">{product.line_total.formatted_with_symbol}</Typography>
-//         </ListItem>
-//       ))}
-//       <ListItem style={{ padding: '10px 0' }}>
-//         <ListItemText primary="Total" />
-//         <Typography variant="subtitle1" style={{ fontWeight: 700 }}>
-//           {checkoutToken.live.subtotal.formatted_with_symbol}
-//         </Typography>
-//       </ListItem>
-//     </List>
-//   </>
-// );
+const ImgContainer = styled.div`
+    height: 100%;
+    flex: 1;
+    background-color: teal;
+`;
 
-// export default Review;
+const Image = styled.img`
+    border-radius: 8px;
+    padding: 10px;
+    width: 400px;
+ `;
+
+ const Right = styled.div`
+flex: 2;
+display: flex;
+align-items: top;
+justify-content: flex-end;
+`;
+
+const MenuItem = styled.div`
+font-size: 15px;
+cursor: pointer;
+margin-left: 20px;
+color: white;
+
+`;
+
+
+const Review = () => (
+   <Container>
+       
+          
+       <ImgContainer>
+           <Image src='https://m.media-amazon.com/images/I/61Se1CwF6YS._AC_SL1500_.jpg'/>
+       </ImgContainer>
+     Leave a Review for Product
+    <Comments  />
+    <ul><DisplayComment/></ul>
+    <ul><ReplyComments/></ul>
+    <Right>
+
+    <MenuItem> <a href="/home">Home</a></MenuItem>
+    </Right>
+
+    </Container>
+   
+ );
+
+ export default Review;

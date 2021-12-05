@@ -13,10 +13,9 @@ import { Routes, Route } from "react-router-dom";
 import jwtDecode from "jwt-decode";
 import { useEffect } from "react";
 import Pay from "../src/Pay";
+import Review from "./Components/Review";
 import PaymentForm from "./Components/PaymentForm";
-// import Discount from "./Components/Discount";
 import Checkout from "./Components/Checkout";
-import Review from "../src/Components/Review";
 import {Elements} from '@stripe/react-stripe-js';
 import {loadStripe} from '@stripe/stripe-js';
 
@@ -44,7 +43,6 @@ function App() {
         
         <Routes>
   
-  
           <Route path="/" exact element={<Home user={user} />} />
           <Route path='/register' element={<Register />} />
           <Route path='/login'  element={<Login user={user}/>} />
@@ -59,13 +57,8 @@ function App() {
           <Route path='/product' element={<Product user={user} />} />
           <Route path='/checkout' element={<Checkout user={user} />} />
            <Route path='/paymentForm' element={<PaymentForm user={user} />} />
-          {/* <Route path='/review' element={<Review user={user} />} />  */}
-          
-          
-          {/* <Route path='/discount' element={<Discount user={user} />} />
-           */}
-  
-  
+           <Route path='/review' element={<Review user={user} />} />
+         
         </Routes>
       </div>
     );

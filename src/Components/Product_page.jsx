@@ -53,7 +53,7 @@ function Product_page() {
           View Products
         </button>
         <button>
-        <MenuItem>  <a href="/Pay"> Checkout </a></MenuItem>
+        <MenuItem>  <a href="/pay"> Checkout </a></MenuItem>
         </button>
         
       </header>

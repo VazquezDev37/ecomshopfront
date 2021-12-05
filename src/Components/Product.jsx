@@ -100,7 +100,7 @@ export default function Product({ setCart, cart }) {
             <button onClick={() => addToCart(product)}>
               Add to Cart
             </button>
-            <button><a href="/PaymentForm"> Checkout </a></button>
+            <button><a href="/pay"> Checkout </a></button>
             </Button>
            
           </div>

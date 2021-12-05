@@ -50,6 +50,28 @@ const SummaryItemPrice = styled.span`
     margin: 5px 30px;
 `;
 
+const Button = styled.button`  
+    padding: -10px 60px;
+    background-color: teal;
+    color: white;
+    cursor: pointer;
+`;
+
+const Right = styled.div`
+flex: 1;
+display: flex;
+align-items: center;
+justify-content: flex-end;
+`;
+
+const MenuItem = styled.div`
+font-size: 15px;
+cursor: pointer;
+margin-left: 20px;
+color: white;
+
+`;
+
 const Pay = () => {
     return (
         <Container>
@@ -59,19 +81,30 @@ const Pay = () => {
                           <SummaryItemText>Subtotal</SummaryItemText>
                           <SummaryItemPrice>$ </SummaryItemPrice>
                           <SummaryItemText>Shipping</SummaryItemText>
-                          <SummaryItemPrice>$ </SummaryItemPrice>
+                          <SummaryItemPrice>$0 </SummaryItemPrice>
                           <SummaryItemText type= "total">Total</SummaryItemText>
-                          <SummaryItemPrice>$ </SummaryItemPrice>
+                          <SummaryItemPrice>$84.99 </SummaryItemPrice>
                       </SummaryItem>
-                      
 
-                Pay for Products Here!! using Stripe or PayPal.
+                      <Right>
+          
+                     <MenuItem>  <a href="/https://buy.stripe.com/test_aEU8y4ban81l2K4cMM">PAY NOW</a></MenuItem>
+          
+                     <MenuItem> <a href="/home">Home</a></MenuItem>
+                     </Right>
+                     
 
-                CLick on link below to process payment...
+                Pay for Products Here!! using Stripe.
 
-                <Comments  />
+                CLick on Pay button to process payment...
+
+                
+                
+
+                {/* Leave Reviews for Product */}
+                {/* <Comments  />
             <ul><DisplayComment/></ul>
-          <ul><ReplyComments/></ul>
+          <ul><ReplyComments/></ul> */}
 
           
              </Summary>
