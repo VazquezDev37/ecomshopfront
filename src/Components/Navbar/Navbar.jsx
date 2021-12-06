@@ -72,8 +72,7 @@ const Navbar = ({ user }) => {
           <Language></Language>
           <SearchContainer>
             <Input/>
-            {/* <Search  /> */}
-            <a href="/Product_page">Search</a>
+            <a href="/Review">Search</a>
           </SearchContainer>
           </Left>
         <Center><Logo>Isaac's Ecom Shop</Logo></Center>

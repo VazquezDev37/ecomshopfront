@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import styled from 'styled-components';
 
 const Button = styled.button`  

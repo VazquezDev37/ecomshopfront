@@ -1,14 +1,6 @@
 import React from "react";
-import  styled  from 'styled-components';
 import {useStripe, useElements, PaymentElement} from '@stripe/react-stripe-js';
 
-
-const MenuItem = styled.div`
-     font-size: 20px;
-     cursor: pointer;
-     margin-left: 5px;
-     text-decoration: none;
- `;
 
 
 const Checkout = () => {

@@ -1,8 +1,5 @@
 import React from 'react';
 import  styled  from 'styled-components';
-import Comments from './Components/Comments';
-import DisplayComment from './Components/DisplayComment';
-import ReplyComments from './Components/ReplyComments';
 
 
 const Container = styled.div`
@@ -50,12 +47,6 @@ const SummaryItemPrice = styled.span`
     margin: 5px 30px;
 `;
 
-const Button = styled.button`  
-    padding: -10px 60px;
-    background-color: teal;
-    color: white;
-    cursor: pointer;
-`;
 
 const Right = styled.div`
 flex: 1;

@@ -13,13 +13,6 @@ const MenuItem = styled.div`
      text-decoration: none;
  `;
 
- const Button = styled.button`  
-    padding: -10px 60px;
-    background-color: teal;
-    color: white;
-    cursor: pointer;
-`;
-
 
 const PAGE_PRODUCT = 'product';
 const PAGE_CART = 'cart';

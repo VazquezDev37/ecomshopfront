@@ -100,10 +100,8 @@ const Button = styled.button`
         <form onSubmit={(e) => getTotalDiscount(e)}>
       
       <input
-        type="text"
         onChange={ handleChange }
         onCLick={ totalCost}
-        type="text" 
       data-label="Promo Code" 
       data-msg="Please enter a valid promo code." 
       type="text" name="promo-code" 
