@@ -32,7 +32,7 @@ body {
   width: 300px;
   height: 400px;
   color: white;
-  background: url("/Users/isaacvazquez1/Desktop/ecomfront/src/Pictures/pexels-athena-2582937.jpg")
+  background: url("/Users/isaacvazquez1/Desktop/VSCode/ecomfront/src/Pictures/pexels-athena-2582937.jpg")
 }
 
 h1 {
@@ -113,7 +113,7 @@ input[type="submit"]:active {
   padding: 40px;
   width: 300px;
   height: 400px;
-  background: url("/Users/isaacvazquez1/Desktop/ecomfront/src/Pictures/pexels-athena-2582937.jpg");
+  background: url("/Users/isaacvazquez1/Desktop/VSCode/ecomfront/src/Pictures/pexels-athena-2582937.jpg");
   background-size: cover;
   background-position: center;
   border-radius: 0 2px 2px 0;

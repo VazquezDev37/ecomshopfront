@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Home from "./Pages/Home/home";
-import Register from "./Pages/Register/register";
+import Register from "../src/Pages/Register/register";
 import Login from "./Pages/Login/login";
 import Logout from "./Pages/logout";
 import Cart from "./Pages/Cart";
