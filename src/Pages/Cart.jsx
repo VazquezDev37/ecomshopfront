@@ -5,14 +5,12 @@ import { Elements } from "@stripe/react-stripe-js";
 import PaymentForm from '../Components/PaymentForm';
 
 
-
 const Button = styled.button`  
     padding: -10px 60px;
     background-color: teal;
     color: white;
     cursor: pointer;
 `;
-
 
  function Cart({ cart, setCart }) {
     const getTotalSum = () => {

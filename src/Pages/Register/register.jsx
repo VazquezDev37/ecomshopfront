@@ -3,14 +3,12 @@ import './register.css';
 import axios from 'axios';
 import styled from 'styled-components';
 
- 
 const Button = styled.button`  
     padding: 15px 10px;
     background-color: grey;
     color: white;
     cursor: pointer;
 `;
-
 
 function Register() {
    
@@ -64,6 +62,5 @@ function Register() {
       </div>
     );
   }
-
 
 export default Register;
