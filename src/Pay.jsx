@@ -79,7 +79,7 @@ const Pay = () => {
 
                       <Right>
           
-                     <MenuItem>  <a href="/https://buy.stripe.com/test_aEU8y4ban81l2K4cMM">PAY NOW</a></MenuItem>
+                     <MenuItem>  <a href="/https://checkout.stripe.com/pay/test">PAY NOW</a></MenuItem>
           
                      <MenuItem> <a href="/home">Home</a></MenuItem>
                      </Right>
@@ -87,10 +87,7 @@ const Pay = () => {
 
                 Pay for Products Here!! using Stripe.
 
-                CLick on Pay button to process payment...
-
-                
-                
+                CLick on Pay button to process payment information...
 
                 {/* Leave Reviews for Product */}
                 {/* <Comments  />

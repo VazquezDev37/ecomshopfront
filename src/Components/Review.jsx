@@ -4,8 +4,6 @@ import Comments from './Comments';
 import DisplayComment from './DisplayComment';
 import ReplyComments from './ReplyComments';
 
-
-
 const Container = styled.div`
     width: 100%;
     height: 100vh;
@@ -42,11 +40,9 @@ color: white;
 
 `;
 
-
 const Review = () => (
    <Container>
-       
-          
+              
        <ImgContainer>
            <Image src='https://m.media-amazon.com/images/I/61Se1CwF6YS._AC_SL1500_.jpg'/>
        </ImgContainer>
