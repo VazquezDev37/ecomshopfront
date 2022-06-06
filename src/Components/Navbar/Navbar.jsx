@@ -78,11 +78,11 @@ const Navbar = ({ user }) => {
         <Center><Logo>Isaac's Ecom Shop</Logo></Center>
         <Right>
           
-          <MenuItem>  <a href="/Register">REGISTER</a></MenuItem>
+          <MenuItem>  <a href="/Register">Register</a></MenuItem>
           
-          <MenuItem> <a href="/Login">LOGIN</a></MenuItem>
+          <MenuItem> <a href="/Login">Login</a></MenuItem>
            
-          <MenuItem> <a href="/Login">LOGOUT</a></MenuItem>
+          <MenuItem> <a href="/Login">Logout</a></MenuItem>
           
           <MenuItem>
             <Badge badgeContent={1} color= "primary"> <MenuItem> <a href="/Product_page"> <ShoppingCartOutlinedIcon /></a></MenuItem>
